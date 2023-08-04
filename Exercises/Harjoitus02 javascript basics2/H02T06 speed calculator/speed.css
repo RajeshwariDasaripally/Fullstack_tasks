@@ -1,0 +1,38 @@
+body {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+  }
+  #f{
+    border: dashed;
+    padding:10px;
+    width:max-content;
+    margin:20px;
+    border-radius: 10px;
+    background-color: rgba(219, 170, 234, 0.854);
+    text-align: center;
+  }
+  label{
+    text-align: left;
+    font-size: 25px;
+    margin-right: 10px;
+  }
+  input {
+    width:20%;
+    height:10%;
+    font-size: 20px;
+    margin-left:10px;
+
+  }
+  button {
+    width:80%;
+    background-color: rgb(103, 103, 107);
+    color: white;
+    font-size: 20px;
+    ;
+  }
+  #results{
+    font-size: 20px;
+    text-align: center;
+  }

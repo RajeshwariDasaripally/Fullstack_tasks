@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="houses.css">
+    <title>Document</title>
+    <script type="text/javascript" src="houses.js"></script>
+</head>
+<body>
+  <div id="checkboxContainer">
+            <label>
+                <input type="checkbox" id="sizeCheckbox" onchange="updateSizeFilter()"> Size under 200m<sup>2</sup>
+            </label>
+            <br>
+            <label>
+                <input type="checkbox" id="priceCheckbox" onchange="updatePriceFilter()"> Price under 1,000,000 euros
+            </label>
+            <br>
+            <div id="houses"></div>
+        </div>
+    
+</body>
+</html>

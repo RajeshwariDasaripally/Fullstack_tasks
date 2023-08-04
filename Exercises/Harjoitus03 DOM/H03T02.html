@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>H03T02-PRINT HANDICAPS</title>
+</head>
+<body>
+    <button onclick="print_list()">Tulosta tasoitukset</button>
+<ul id="hcplist"></ul>
+
+<script>
+    var hcpdata = [{ "name": "Ari", "hcp": 54 },
+               { "name": "Pasi", "hcp": 5 },
+               { "name": "Seppo", "hcp": 20 }];
+
+
+    function print_list(){
+        let ulnode = document.getElementById("hcplist");
+        ulnode.innerHTML = ""; // out of for loop only once added (repeats if it in for loop statements)
+        for(i=0;i<hcpdata.length;i++) {
+            let item = hcpdata[i];
+            let text = item.name + " " + item.hcp
+            let linode = document.createElement('li');
+            let litext = document.createTextNode(text);
+            linode.appendChild(litext);
+            ulnode.appendChild(linode);
+
+    }
+}
+</script>
+    
+
+</body>
+</html>

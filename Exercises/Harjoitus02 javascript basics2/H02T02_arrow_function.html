@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+<meta charset="UTF-8"> 
+<title>H02T02 Call back arrow function</title>
+</head>
+<body>
+<p id="call"></p>
+<script>
+    // Arrow function with call back argument (two parameters and other function as argument)
+
+   const myFunctionWithCallback = (p1, p2, callback) => {
+    return callback(p1, p2);     // this function return the function (p1, p2)
+  } 
+
+  // template expression/ templete literals    
+  // string is enclosed in backticks (``) 
+  // variable or expression is included within ${ } inside the string,
+  const myFunc = (p1, p2) => `Pitsa ${p1} ja ${p2}`;  // arrow function
+  const result = myFunctionWithCallback('kinkulla', 'juustolla', myFunc);
+
+  console.log(result);
+  document.getElementById("call").innerHTML = result;
+
+</script>
+</body>
+</html> 

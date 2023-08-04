@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="colorselector.css">
+    <title>colorselector</title>
+</head>
+<body>
+    <div id="container">
+        <div class="m_wrapper">
+        <h1>Valitse juhlaväri:</h1>
+        <select id="m_onchange">
+            <option value="#0000FF"> sininen</option>
+            <option value="#008000" type="color">Vihrea</option>
+            <option value="#FFFF00" type="color">Keltäinen</option>
+            <option value="#FFC0CB" type="color">Pinki</option>
+            <option value="#FF0000" type="color">Punainen</option>
+            <option value="#FFA500" type="color">Oranssi</option><br>
+        </select>
+            <h1>Mikä juhla?</h1>
+            <input type="text" id="m_text"><br><br>
+            <input type="button" id = "change-color" value="Vaihda valittu taustaväri"><br><br>
+            <p id="m_result"></p>
+        </div>
+        
+    </div>   
+    
+    <script>  
+          const colorPicker = document.getElementById('m_onchange');
+        const partyInput = document.getElementById('m_text');
+        const result = document.getElementById('m_result');
+        
+        // add event listener to the button to change background color
+        document.getElementById('change-color').addEventListener('click', () => {
+            result.style.backgroundColor = colorPicker.value;
+            const text = partyInput.value.replace(/[0-9]/gi, '');
+            result.innerHTML = `<h1>Tulosalue</h1><br>Juhlaväri: ${colorPicker.value}<br> Juhla: ${text}`;
+        });
+        </script>
+    
+
+</body>
+</html>

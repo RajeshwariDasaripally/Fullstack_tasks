@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+<meta charset="UTF-8"> 
+<title>H02T04 setTimeout setInterval clearInterval</title>
+</head>
+<body>
+<h2>Java script setTimeout, setInterval, clearInterval function output</h2>
+<script>
+function startSinging() {
+  console.log("OMG-Lady Gaga start singing");
+  document.write("OMG-Lady Gaga start singing");
+  setTimeout(stopSinging, 5000);
+  fwId = setInterval (fireworks,1000);
+  
+}
+
+function fireworks(){
+  console.log("Nice-fireworks!");
+  document.write("Nice-fireworks!<br>");
+}
+
+function stopSinging(){
+  clearInterval(fwId);
+  console.log("wow-IT was the best concert in my life...");
+  document.write("wow-IT was the best concert in my life...")
+}
+
+startSinging();
+
+</script>
+</body>
+</html> 

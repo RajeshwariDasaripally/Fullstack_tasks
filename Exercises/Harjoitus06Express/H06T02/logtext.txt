@@ -1,0 +1,7 @@
+19/04/2023 18.02.08: GET /users
+19/04/2023 18.04.53: GET /users/1
+19/04/2023 18.07.54: DELETE /users/3
+19/04/2023 18.08.14: PUT /users/1?name=Pekka%20Peloton
+19/04/2023 18.08.25: GET /users
+19/04/2023 18.08.39: POST /users/
+19/04/2023 18.08.57: GET /users

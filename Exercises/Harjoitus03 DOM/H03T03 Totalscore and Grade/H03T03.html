@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="grade.css">
+    <title>totalscore and grade</title>
+</head>
+<body>
+    <form id="f">
+<div id ="container">
+    <div id = "c1">
+        <label for="s1">T1</label> 
+        <label for="s2">T2</label> 
+        <label for="s3">T3</label>
+        <label for="s4">T4</label>
+    </div>
+    <div id="c2">
+        <input type="number" class="score-input" id="score1">
+        <input type="number" class="score-input" id="score2">
+        <input type="number" class="score-input" id="score3">
+        <input type="number" class="score-input" id="score4">
+    </div>
+
+</div>
+        <div> <p id="total-score">Total scored points:</p> 
+            <p id="grade">Grade</p> 
+        </div>
+      </form>
+  
+    
+
+  <script>
+  
+  // get score input fields and result elements
+  const scoreInputs = document.querySelectorAll('.score-input');
+  const totalScore = document.getElementById('total-score');
+  const grade = document.getElementById('grade');
+  
+  // add event listeners to score input fields
+  // blur an event called to do some action
+  scoreInputs.forEach(input => {
+    input.addEventListener('blur', () => {
+      // check if input value is a number between 0-6
+      const score = parseFloat(input.value);
+      if (!isNaN(score) && score >= 0 && score <= 6) {
+        // calculate total score and grade based on score
+        // Array.from() is to create array from given scoreinputs
+        // reduce() to iterate over the array of input elements and adding the parsed input value
+        // acc is accumulator (0 is initialvalue)hold running sum of input values
+        const sumTotalScore = Array.from(scoreInputs).reduce((acc, input) => acc + parseFloat(input.value), 0);
+        const scoreGrade = getGrade(sumTotalScore);
+        // update result elements
+        totalScore.textContent = "Total scored points: " + sumTotalScore.toFixed(2);
+        grade.textContent = "Grade: " + scoreGrade;
+      } else {
+        // input value is not a valid score
+        totalScore.textContent = 'ERROR!';
+        grade.textContent = 'ERROR!';
+      }
+    });
+  });
+  
+  
+  // function to get grade based on total score
+  function getGrade(totalScore) {
+    if (totalScore < 13) {
+      return 0;
+    } else if (totalScore < 16) {
+      return 1;
+    } else if (totalScore < 18) {
+      return 2;
+    } else if (totalScore < 20) {
+      return 3;
+    } else if (totalScore < 22) {
+      return 4;
+    } else {
+      return 5;
+    }
+  }
+</script>
+</body>
+</html>

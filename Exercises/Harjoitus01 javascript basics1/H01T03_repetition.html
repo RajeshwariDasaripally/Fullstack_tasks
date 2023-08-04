@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+<meta charset="UTF-8"> 
+<title>H01T03 for loop </title>
+</head>
+
+<body>
+<h2>Repetition sentence to the web console.</h2> 
+<p id = "forloop"></p>
+<p id = "repeat"></p>
+<script>
+const words = ["JavaScript", "studying", "is", "wonderful!"];
+let sentence = "";
+
+for(let i = 0; i < words.length; i++){
+  sentence += words[i] + " ";
+}
+console.log(sentence);
+console.log(sentence.repeat(2));
+document.getElementById("forloop").innerHTML = sentence;
+document.getElementById("repeat").innerHTML = sentence.repeat(2);
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+<meta charset="UTF-8"> 
+<title>H02T03 setTimeout method</title>
+</head>
+<body>
+<h2>Java script setTimeout function output</h2>
+<script>
+    // function that return setTimeout method which has function as an argument and tastime
+    const print = (str, taskTime) => {
+      setTimeout(function() {
+    console.log(`${str} finished!`)
+    const output = `${str} finished!<br>`
+    document.write(output);
+  }, taskTime)
+}
+// Arrow function with call back argument (two parameters and other function as argument)
+const execute = (str, taskTime, callback)  => {  
+  callback(str, taskTime);
+}
+
+console.log("Task1 to execution...");
+document.write("Task1 to execution...<br>");
+execute('Task1', 2000, print);    // arguments passing
+
+console.log("Task2 to execution...");
+document.write("Task2 to execution...<br>");
+execute('Task2', 2000, print);
+
+console.log("Task3 to execution...");
+document.write("Task3 to execution...<br>");
+execute('Task3', 500, print);
+
+console.log("Last code line executed!");
+document.write("Last code line executed!<br>");
+
+
+</script>
+</body>
+</html> 

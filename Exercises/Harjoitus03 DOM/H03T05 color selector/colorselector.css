@@ -1,0 +1,22 @@
+
+
+p{
+    height: 40%;
+    border: dotted;
+    padding:10px;    
+}
+#change-color{
+    background-color: rgb(236, 217, 49);
+    border: solid 1px;
+    border-radius: 1px;
+    height:30px;
+}
+    
+.m_wrapper{
+    margin:30px;
+    border: dotted;
+    padding: 30px;
+    height:500px;
+    width:50%;
+    background-color:rgb(202, 228, 237)
+}

@@ -1,0 +1,49 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+  
+  }
+#searchcontainer{
+    border:dashes;
+
+}
+
+#houses {
+    width: 600px;
+    height: 800px;
+    text-align: left;
+    margin: 10px;
+    overflow: auto;
+    border: dotted;
+    padding:10px;
+}
+
+.houseContainer {
+    display: block;
+    border: 1px solid #ccc;
+    width: 570px;
+    height: 165px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 12px;
+    margin: 2px;
+    padding: 2px;
+}
+
+.houseImage {
+    width: 225px;
+    height: 160px;
+    float: left;
+    margin: 2px;
+}
+
+p.header {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+p.content {
+    font-style: italic;
+    font-size: 10px;
+    font-weight: bold;
+}

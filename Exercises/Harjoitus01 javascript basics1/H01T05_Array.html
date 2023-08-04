@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+<meta charset="UTF-8"> 
+<title>H01T05 array </title>
+</head>
+
+<body>
+<h2>print the original array and the even numbers array to the web console.</h2> 
+<p id = "array"></p>
+<p id = "evenarray"></p>
+<script>
+let num = [];
+
+function find_even_no(num) { 
+  let even_no = [];
+  for(let i = 0; i < num.length; i++){
+    if (num[i] %2 ==0){
+        even_no.push(num[i]);
+    }
+}
+return even_no;
+}
+num = [3,69,12,45,24,68];
+let even = find_even_no(num);
+console.log("Original array: " + num);
+console.log("Even numbers array: " + even);
+document.getElementById("array").innerHTML= "Original array: " + num + "<br>";
+document.getElementById("evenarray").innerHTML= "Even numbers array: " + even;
+</script>
+
+</body>
+</html>

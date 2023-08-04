@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+      
+       div {
+        text-align: center;
+       }
+
+       img {
+        margin:20px;
+       }
+    </style>
+    <title>H03T01-IMAGE CHANGE</title>
+</head>
+<body>
+    <h1>Image shown in the space below is replaced by an image corresponding to the link text.</h1>
+    <div>
+    <a onclick="vaihda_kuva(1)" href="#">kuva1</a> |
+    <a onclick="vaihda_kuva(2)" href="#">kuva2</a> |
+    <a onclick="vaihda_kuva(3)" href="#">kuva3</a> |
+    <a onclick="vaihda_kuva(4)" href="#">kuva4</a> |
+    
+  <br>
+    <img id= "kuva" alt="finlandphotos" src="kuva1.JPG" width="400" height="450" >
+    </div>
+    <script>
+        function vaihda_kuva(kuvanumero){
+            document.getElementById("kuva").src = "kuva" + kuvanumero +".JPG"
+        }
+    </script>
+
+</body>
+</html>

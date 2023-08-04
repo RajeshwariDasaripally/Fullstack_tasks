@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+<meta charset="UTF-8"> 
+<title>H02T04 Function oops</title>
+</head>
+<body>
+<h2>JavaScript created Function (oops)</h2>
+<div id="p1"></div>
+<div id="p2"></div>
+<div id="p3"></div>
+<script>
+
+function Person(name, age, phone, email){
+  return{
+    name: name,
+    age: age,
+    phone:phone,
+    email: email,
+    incrementAge: function(){
+      this.age++;
+      return this.age;
+    }
+  };
+}
+
+// three different objects
+var person1= Person("Vamshi", 29, "040 8976298", "vamshi.p@gmail.com");
+var person2= Person("Lokesh", 32, "040 8134123", "lokesh2@gmail.com");
+var person3= Person("Ravikrishna", 38, "040 9976210", "ravikrishna@gmail.com");
+
+var person1Age = person1.incrementAge();
+var person2Age = person2.incrementAge();
+var person3Age = person3.incrementAge();
+
+
+console.log(person1Age);
+console.log(person2Age);
+console.log(person3Age);
+
+console.log(person1)
+console.log(person2)
+console.log(person3)
+
+document.getElementById("p1").innerHTML= ("Name: "+ person1.name + " Age: " + person1Age);
+document.getElementById("p2").innerHTML= ("Name: "+ person2.name + " Age: " + person2Age);
+document.getElementById("p3").innerHTML= ("Name: "+ person3.name + " Age: " + person3Age);
+
+</script>
+</body>
+</html>

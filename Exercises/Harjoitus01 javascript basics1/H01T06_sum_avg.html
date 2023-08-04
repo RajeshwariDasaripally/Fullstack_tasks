@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>H01T06 for of</title>
+</head>
+<body>
+	<h2>JavaScript-taulukon läpikäynti</h2>
+    <p>for-ja for...of-silmukoilla</p>
+	<hr>
+	<p id="result"></p>
+
+<script>
+	let taulukko = [11, 22, 33, 44];
+    let summa = 0;
+    let lukumaara = 0;
+    let keskiarvo;
+    let tulosrivit = '';
+
+    tulosrivit += "<p>Taulukon alkiot ovat </p>"
+
+    for (let value of taulukko) {
+			summa += value;
+			lukumaara++;
+			tulosrivit += "taulukko["+taulukko.indexOf(value)+"]"+ "=" + value + "<br>";
+		}
+        
+        keskiarvo = summa / lukumaara;
+        tulosrivit += "<p>Taulukon alkioiden </p>"
+		tulosrivit += "lukumäärä: " + lukumaara + "<br>";
+		tulosrivit += "summa: " + summa + "<br>";
+		tulosrivit += "keskiarvo: " + keskiarvo.toFixed(1) + "<br>";
+
+		document.getElementById("result").innerHTML = tulosrivit;
+
+	</script>
+</body>
+</html>

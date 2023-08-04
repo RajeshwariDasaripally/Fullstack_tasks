@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+<meta charset="UTF-8"> 
+<title>H02T01 sum function</title>
+<style>
+body { text-align: center;}
+input, button, div { margin-bottom: 5px;
+                    margin-top: 5px;}
+</style>
+</head>
+<body>
+<h2>ADD TWO NUMBERS</h2>
+<form id="f">
+    <label for="n1">Enter first number:</label>
+    <input type="number" id="n1"><br>
+    <label for="n2">Enter second number:</label>
+    <input type="number" id="n2"><br><br>
+    <button type="button" onclick="sumOfResults(f.n1.value, f.n2.value)">Calculate</button><br><br>
+ </form>
+ <div id="results"></div>
+<script>
+    function sumOfResults(a, b){
+        var sum =calculateSum(a, b);
+        document.getElementById("results").innerHTML = "Sum of two numbers: " + sum + "<br>"
+
+    }
+    function calculateSum(a, b) {
+        var s = parseInt(a) + parseInt(b);
+        return s;
+    }
+
+
+</script>
+</body>
+</html> 

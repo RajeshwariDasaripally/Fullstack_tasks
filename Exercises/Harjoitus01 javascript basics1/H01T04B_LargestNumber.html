@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+<meta charset="UTF-8"> 
+<title>H01T04 FUNCTION</title>
+</head>
+
+<body>
+<h2>Call the function made that prints the largest of the numbers to the web console.</h2> 
+
+<script>
+
+let x1 = 890;
+let x2 = 135;
+let x3 = 1260;
+console.log(x1);
+console.log(x2);
+console.log(x3);
+let number = find_max_no(x1, x2, x3)
+console.log("The largest no: " + number);
+document.write(x1 + "<br>");
+document.write(x2 + "<br>");
+document.write(x3 + "<br>");
+document.write("The largest no: " + number);
+
+function find_max_no() {
+  let max_no;
+  if (x1 > x2 && x1 > x3){
+        max_no = x1
+  }
+  else if(x2 > x1 && x2 > x3){
+        max_no = x2
+  }
+  else{
+        max_no = x3
+  }
+  return max_no;
+}
+
+
+
+</script>
+
+</body>
+</html>

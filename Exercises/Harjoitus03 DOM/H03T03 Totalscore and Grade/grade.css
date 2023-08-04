@@ -1,0 +1,42 @@
+body {
+    display: flex;
+    height: 100vh;
+    justify-content:center;
+    align-items: center;
+    font-size: large;
+  }
+  #container{
+    border: solid 1px;
+    padding: 10px;
+    
+ }
+ label{
+    display: inline-block;
+    width: 40px;
+    margin-left: 10px;
+    margin-bottom:5px;
+    border: solid 1px;
+    background-color: aqua;
+    text-align: center;
+
+ }
+ input {
+  display: inline-block;
+  width: 40px;
+  margin-left: 10px;
+  border: 3px double black;
+
+}
+
+  .label {
+
+    border: solid 2px;
+    padding: 2px;
+    background-color: aqua;
+    
+  }
+
+  #f{
+    border: dashed 2px;
+    padding: 20px;
+  }
